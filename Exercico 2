@@ -1,0 +1,68 @@
+<? php
+	classe Empregados {
+	  public $ unome;
+	  public $ znome;
+	  público $ salmen;
+	  public $ salanu;
+	
+	  function pública __construct () {
+	    $ this-> unome = "Vinicius";
+	    $ this-> znome = "Almeida";
+	    $ this-> salmen = 1000,00;
+	  }
+	  function pública setUnome ($ recebe) {
+	    return $ this-> Unome = $ recebe;
+	  }
+	  function pública getUnome () {
+	    retornar $ this -> unome;
+	  }
+	  function pública setZnome ($ recebe1) {
+	    return $ this-> znome = $ recebe1;
+	  }
+	  function pública getZnome () {
+	    retornar $ this -> znome;
+	  }
+	  function pública setSalmen ($ recebe2) {
+	    return $ this-> salmen = $ recebe2;
+	  }
+	  function pública getSalmen () {
+	    retornar $ this -> salmen;
+	  }
+	  function pública setSalanu () {
+	    
+	    retornar $ this-> salanu = $ this-> salmen * 12;
+	  }
+	  function pública getSalanu () {
+	    retornar $ this -> salanu;
+	  }
+	  function pública validaSalmen () {
+	    if ($ this-> salmen <0) {
+	      $ this-> salmen = 0,0;
+	    }
+	  }
+	  public function aumentasal_men () {
+	    $ porc = ($ this-> salmen * 10) / 100;
+	    $ this-> salmen = $ this-> salmen + $ porc;
+	  }
+	}
+	Empregado 1
+	$ em1 = novosEmpregados ();
+	$ em1-> validaSalmen ();
+	$ em1-> set_Salanu ();
+	echo "O Salario anual é de {$ em1-> getUnome ()} {$ em1-> getZnome ()} é R $ {$ em1-> getSalanu ()} \ n"; 
+	$ em1 -> aumentasalmen ();
+	$ em1-> setSalanu ();
+	echo "O salário anual de {$ empreg1-> getUnome ()} recebe 10% e agora é de R $ {$ empreg1-> getSalanu ()} \ n";
+	
+Empregado 2
+	      $ em2 = empregados Novos ();
+	      $ em2 -> setUnome ("Paulo");
+	      $ em2 -> setZnome ("Padilha");
+	      $ em2-> setSalmen (2000);
+	     $ em2-> validaSalmen ();
+	      $ em2-> setSalanu ();
+	echo "O Salario anual do funcionário é  de {$ em2-> getUnome ()} {$ em2-> getZnome ()} é R $ {$ em2-> getSalanu ()} \ n"; 
+	$ em2 -> aumenta_salmen ();
+	$ em2-> setSalanu ();
+	echo "O salário anual do funcionário é de {$ em2-> getUnome ()} recebe 10% e agora é de R $ {$ em2-> getSalanu ()} \ n";
+	?>
