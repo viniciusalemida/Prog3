@@ -1,0 +1,46 @@
+<? php
+	classe Produto {
+	  public $ nome_prod;
+	  public preço_prod;
+	  public $ quantidade_prod;
+	  público $ pagar;
+	 público $ desconto;
+	  function pública Produto ($ n, $ p, $ q) {
+	    $ this-> nome_prod = $ n;
+	    $ this-> preço_prod = $ p;
+	    $ this-> quantidade_prod = $ q;
+	    $ this-> pagar = $ this-> preço_prod * $ this-> quantidade_prod;
+	      if ($ this-> quantidade_prod> = 11 e $ this-> quantidade_prod <= 20) {
+	        $ this-> desconto = "10%";
+	        $ desc = ($ this-> pagar * 10) / 100;
+	        $ this-> pagar = $ this-> pagar - $ desc;
+	        
+	      }
+	      elseif ($ this-> quantidade_prod> = 21 e $ this-> quantidade_prod <= 50) {
+	        $ this-> desconto = "20%";
+	        $ desc = ($ this-> pagar * 20) / 100;
+	        $ this-> pagar = $ this-> pagar - $ desc;
+	      }
+	      elseif ($ this-> quantidade_prod> 50) {
+	        $ this-> desconto = "25%";
+	        $ desc = ($ this-> pagar * 25) / 100;
+	        $ this-> pagar = $ this-> pagar - $ desc;
+	      }
+	      outro{
+	        $ this-> desconto = 0;
+	      }
+	  }
+	}
+	         $ prod1 = novo Produto ("Volante", 3,50,32
+	 );
+	         print_r ($ prod1);
+
+	
+	         $ prod2 = novo Produto ("Roda", 3,00,35);
+	         print_r ($ prod2);
+
+	
+	         $ prod3 = novo Produto (“Módulo de som", 6,00,50);
+	  print_r ($ prod3);
+	  ?>
+
